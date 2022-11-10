@@ -2,14 +2,16 @@ package com.jsolutions;
 
 public class Main {
 
-
+//https://www.youtube.com/watch?v=a_BoqsnVR2U
     public static void main(String[] args){
         Main m = new Main();
         //m.extendsThread();
         //m.implementsRunneable();
         //m.threadWithParams();
         //m.threadStates();
-        m.synchronizedThreads();
+        //m.synchronizedThreads();
+        //m.threadLocalExample();
+        m.inheritableThreadLocalExample();
     }
 
 
@@ -86,6 +88,16 @@ public class Main {
         }catch (InterruptedException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public void threadLocalExample(){
+        ThreadLocalExample t = new ThreadLocalExample();
+        t.runThreadLocalExample();
+    }
+
+    public void inheritableThreadLocalExample(){
+        InheritableThreadLocalExample t = new InheritableThreadLocalExample();
+        t.runInheritableThreadLocalExample();
     }
 
 
